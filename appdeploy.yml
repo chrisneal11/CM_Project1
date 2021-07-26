@@ -1,0 +1,11 @@
+---
+
+- host: appserver
+  task:
+    - name: Copy WAR file to the AWS EC2 remote host
+      copy:
+        src: ./target/
+        dest: /home/ubuntu/apache-tomcat-10.0.8/webapps/
+        owner: ubuntu
+        group: ubuntu
+        mode: 0755
