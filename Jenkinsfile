@@ -25,7 +25,7 @@ pipeline {
         stage("Deploy Package") {
            steps {
                   sh "whoami"
-                  sh ""
+//                  sh ""
                   sh "ansible --version"
                  }
         }
