@@ -1,11 +1,13 @@
 ---
 
-- host: appserver
+- name : appdeploy
   task:
-    - name: Copy WAR file to the AWS EC2 remote host
+    - name: Copy WAR file to the AWS EC2 Node1 remote host
       copy:
-        src: ./target/
+        src: ./target/*.war
         dest: /home/ubuntu/apache-tomcat-10.0.8/webapps/
         owner: ubuntu
         group: ubuntu
         mode: 0755
+      become: true
+

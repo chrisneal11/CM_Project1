@@ -1,0 +1,16 @@
+---
+
+ - name: Build Artifacts
+   hosts: 127.0.0.1 
+   tasks:
+   - name: "Download App to Build"
+     git:
+       repo: 'https://github.com/chrisneal11/tomcat_test_app.git'
+       dest: ../workspace 
+       version: main
+       depth: 1
+
+   - name: "Build App"
+     command: mvn clean package
+     args:
+        chdir: ../workspace

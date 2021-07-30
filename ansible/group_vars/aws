@@ -1,0 +1,7 @@
+# Variables for EC2 instances
+---
+ansible_ssh_private_key_file: /home/christopherneal/.ssh/aws.pem
+key_name: aws
+aws_region: us-east-1
+ami_id: ami-00399ec92321828f5
+instance_type: t2.micro
