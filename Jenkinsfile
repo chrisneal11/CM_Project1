@@ -26,7 +26,7 @@ pipeline {
            steps {
                   sh "whoami"
 //                  sh ""
-//                  sh "ansible --version"
+                  sh "ansible-playbool -i ./ansible/hosts ./ansible/appdeploy.yml"
                  }
         }
      }
