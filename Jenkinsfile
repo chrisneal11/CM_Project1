@@ -5,7 +5,8 @@ pipeline {
 
         stage('Clone Source') {
            steps {
-                  git branch: 'main', url: 'https://github.com/chrisneal11/tomcat_test_app.git'                 }
+                  git branch: 'main', url: 'https://github.com/chrisneal11/tomcat_test_app'
+                 }
         }
 
         stage("Build Source") {          	 
