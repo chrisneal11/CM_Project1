@@ -15,16 +15,16 @@ pipeline {
                  }
         }
 
-        stage("Fix Ansible/Python Issue") { 
-           steps {
-                  sh "sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1"
-                  sh "sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 2"
-                 }
-        }
+#        stage("Fix Ansible/Python Issue") { 
+#           steps {
+#                  sh "sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1"
+#                  sh "sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 2"
+#                 }
+#        }
 
         stage("Deploy Package") {
            steps {
-                  sh ""
+                  sh "whoami"
                   sh ""
                   sh "ansible --version"
                  }
